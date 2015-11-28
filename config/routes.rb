@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root "pages#home"
 
   devise_for :users, controllers: {registrations: 'registrations'}
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
