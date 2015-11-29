@@ -5,8 +5,9 @@ class PostsController < ApplicationController
     def create
     	@post = current_user.posts.new(post_params)
     	if @post.save
+            @post.create_activity key: 'post.created', owner: @post.user
     	    respond_to do |format|
-                format.html {redirect_to user_path(@post.user.username), notice: "Post Created"}
+                format.html {redirect_to user_path(@post.user.username), notice: "Postado"}
     	    end
     	else
     		 redirect_to user_path(@post.user.username), notice: "Erro ao criar o post." 
@@ -19,7 +20,7 @@ class PostsController < ApplicationController
     def update
         if @post.update(post_params)
             respond_to do |format|
-               format.html {redirect_to user_path(@post.user.username), notice: "Post Created"}
+               format.html {redirect_to user_path(@post.user.username), notice: "Post atualizado"}
             end
         else
              redirect_to post_path(@post), notice: "Error ao atualizar o post"
