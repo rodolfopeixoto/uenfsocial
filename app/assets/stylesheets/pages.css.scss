@@ -1,4 +1,4 @@
-// Place all the styles related to the pages controller here.
+	// Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
@@ -6,7 +6,20 @@ body {
 }
 
 .alert {
-  position: absolute;
-  z-index: 1;
-  width: 200px;
+	position: absolute;
+	z-index: 1;
+	width: 200px;
+}
+
+.front-title {
+	margin-top: 100px;
+}
+
+.landing { 
+  background: image-url("wallpaper.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
 }
