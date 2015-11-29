@@ -9,12 +9,12 @@
 
 			<div class="col-md-4">
 				<h3><%= @user.username %></h3>
-				<p>Age: <%= @user.age %></p>
-				<p>Gender: <%= @user.gender %></p>
+				<p>Idade: <%= @user.age %></p>
+				<p>Gênero: <%= @user.gender %></p>
 			</div>	
 
 			<div class="col-md-4">
-				<h3>Who am I</h3>
+				<h3>Quem eu sou</h3>
 				<small><%= @user.bio %></small>
 			</div>		
 
@@ -29,7 +29,7 @@
 	<!-- Friend Zone -->
 	<div class="col-md-3">
 	<div class="panel panel-default">
-	<div class="panel-heading">Friends (<%= @user.active_friends.size %>)
+	<div class="panel-heading">Amigos (<%= @user.active_friends.size %>)
 	</div>
 	<div class="panel-body">
 
@@ -53,7 +53,7 @@
 	<!-- Profile Activity -->
 	<div class="col-md-3">
 		<div class="panel panel-default">
-		<div class="panel-heading">Recent Activity</div>
+		<div class="panel-heading">Atividades Recente</div>
 		<div class="panel-body">
 			<%= render_activities(@activities) %>
 		</div>
