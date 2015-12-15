@@ -16,8 +16,11 @@
       <ul class="nav navbar-nav"></ul>
       
       <ul class="nav navbar-nav navbar-right"> 
-        <li><%= link_to "People", users_path %></li>
+
+        <li><%= link_to "Sobre", pages_sobre_path %></li>
         <% if current_user %>
+        
+        <li><%= link_to "People", users_path %></li>
         <li><%= link_to "Timeline", activities_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

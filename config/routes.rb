@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "pages#home"
 
   devise_for :users, controllers: {registrations: 'registrations'}
+  get '/pages/sobre', to: 'pages#sobre'
   resources :users, only: [:show, :index]
   resources :friendships, only: [:create, :destroy, :accept] do
       member do

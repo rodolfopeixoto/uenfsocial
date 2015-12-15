@@ -4,4 +4,6 @@ class PagesController < ApplicationController
         redirect_to activities_path
   	end
   end
+  def sobre
+  end
 end
